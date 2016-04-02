@@ -1,0 +1,25 @@
+<html>
+
+<body>
+
+    <div id="view">
+        <div rv-on-load="initSocketInteraction">
+
+            <input type="text" rv-value="newItem" rv-on-enter="addItem"><span rv-if="errors.newItem"> not valid </span>
+            <ul>
+                <li rv-each-item="items">
+                    {item} <i rv-on-click="removeItem">x</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/rivets.bundled.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/rv-config.js"></script>
+    <script src="/js/main.js">
+    </script>
+
+</body>
+
+</html>
